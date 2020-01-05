@@ -46,12 +46,23 @@
                 }
             
 
-            return `You ${result}! ${play} beats ${comp}`
+            return `You ${result}! ${winner} beats ${loser}`
         }
 
-        const playerSelection = "rock"
-        const computerSelection = computerPlay()
-        console.log(playRound(playerSelection, computerSelection))
+        function game() {
+            const rounds = 5
+
+            let playerSelection = ""
+
+            let computerSelection = computerPlay()
+
+            for (i = 0; i < rounds; i++) {
+                playerSelection = prompt("Choose Rock, Paper, or Scissors")
+                console.log(playRound(playerSelection, computerSelection))
+            }
+        }
+
+        game()
     </script>
 </body>
 
